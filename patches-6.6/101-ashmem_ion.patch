@@ -1,0 +1,25 @@
+--- a/drivers/staging/Kconfig
++++ b/drivers/staging/Kconfig
+@@ -54,6 +54,10 @@ source "drivers/staging/nvec/Kconfig"
+ 
+ source "drivers/staging/media/Kconfig"
+ 
++source "drivers/staging/ashmem/Kconfig"
++
++source "drivers/staging/ion/Kconfig"
++
+ source "drivers/staging/board/Kconfig"
+ 
+ source "drivers/staging/gdm724x/Kconfig"
+
+--- a/drivers/staging/Makefile
++++ b/drivers/staging/Makefile
+@@ -17,6 +17,8 @@ obj-$(CONFIG_IIO)		+= iio/
+ obj-$(CONFIG_FB_SM750)		+= sm750fb/
+ obj-$(CONFIG_USB_EMXX)		+= emxx_udc/
+ obj-$(CONFIG_MFD_NVEC)		+= nvec/
++obj-$(CONFIG_ASHMEM)		+= ashmem/
++obj-$(CONFIG_ION)		+= ion/
+ obj-$(CONFIG_STAGING_BOARD)	+= board/
+ obj-$(CONFIG_LTE_GDM724X)	+= gdm724x/
+ obj-$(CONFIG_FB_TFT)		+= fbtft/
